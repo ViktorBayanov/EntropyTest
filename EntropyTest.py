@@ -5,9 +5,9 @@ class RKN:
             self.is_end = False
             self.next = dict()
 
-    def __init__(self, banned_subnerworks_list):
+    def __init__(self, banned_subnetworks_list):
         self.root = self.node()
-        for subnetrwork in banned_subnerworks_list:
+        for subnetrwork in banned_subnetworks_list:
             subnetrwork = subnetrwork.split('/')
             mask = subnetrwork[-1]
             network_ip = subnetrwork[0].split('.')[:(int(mask) // 8)]
